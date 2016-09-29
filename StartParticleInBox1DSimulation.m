@@ -4,7 +4,7 @@ global MainHandle; %stores the handle for MainGUI
 
 %Reset here
 SetTime(0);
-SetTimeScale(0.0003);
+SetTimeScale(0.3000);
 
 set(MainHandle.uipanelTopControls, 'Title', 'PARTICLE in 1D BOX');
 

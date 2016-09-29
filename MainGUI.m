@@ -22,7 +22,7 @@ function varargout = MainGUI(varargin)
 
 % Edit the above text to modify the response to help MainGUI
 
-% Last Modified by GUIDE v2.5 04-Sep-2016 14:43:29
+% Last Modified by GUIDE v2.5 29-Sep-2016 19:32:58
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -216,6 +216,21 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
 end
 
 
+
+% --------------------------------------------------------------------
+function context_TimeScale_200x_Callback(hObject, eventdata, handles)
+% hObject    handle to context_TimeScale_200x (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+SetTimeScale(2.00);
+
+% --------------------------------------------------------------------
+function context_TimeScale_150x_Callback(hObject, eventdata, handles)
+% hObject    handle to context_TimeScale_150x (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+SetTimeScale(1.50);
+
 % --------------------------------------------------------------------
 function context_TimeScale_100x_Callback(hObject, eventdata, handles)
 % hObject    handle to context_TimeScale_100x (see GCBO)
@@ -254,38 +269,6 @@ function context_TimeScale_0x_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 SetTimeScale(0.00);
-
-
-% --------------------------------------------------------------------
-function context_TimeScale_m25x_Callback(hObject, eventdata, handles)
-% hObject    handle to context_TimeScale_m25x (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-SetTimeScale(-0.25);
-
-
-% --------------------------------------------------------------------
-function context_TimeScale_m50x_Callback(hObject, eventdata, handles)
-% hObject    handle to context_TimeScale_m50x (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-SetTimeScale(-0.50);
-
-
-% --------------------------------------------------------------------
-function context_TimeScale_m75x_Callback(hObject, eventdata, handles)
-% hObject    handle to context_TimeScale_m75x (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-SetTimeScale(-0.75);
-
-
-% --------------------------------------------------------------------
-function context_TimeScale_m100x_Callback(hObject, eventdata, handles)
-% hObject    handle to context_TimeScale_m100x (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-SetTimeScale(-1.00);
 
 
 % --------------------------------------------------------------------
@@ -432,7 +415,8 @@ function menu_FiniteSquareWell_1D_Callback(hObject, eventdata, handles)
 % hObject    handle to menu_FiniteSquareWell_1D (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+SetCurrentSimulation(31);
+Reset();
 
 % --------------------------------------------------------------------
 function menu_FiniteSquareWell_2D_Callback(hObject, eventdata, handles)

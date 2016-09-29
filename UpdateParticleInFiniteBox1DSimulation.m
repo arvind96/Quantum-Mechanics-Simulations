@@ -2,10 +2,12 @@ function UpdateParticleInFiniteBox1DSimulation()
 
 while(GetApplicationState() == 1 && GetTime() < 10000)
 
-    x = (0:GetOtherSliderValue1()/100:GetOtherSliderValue1());
-    
-    z = ParticleInBoxWave(GetOtherSliderValue1(), GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x, GetTime());
-    
+    x = (-10:0.1:10);
+    XSize = size(x);
+    z = x;
+    for K = 1:1:XSize(2)
+      z(K) = ParticleInFiniteBoxWave(GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x(K), GetTime());
+    end
     p = CalculateProbability(z);
     
     density = CalculateCurrentDensity(z, ParticleInBoxDiffWave(GetOtherSliderValue1(), GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x, GetTime()));

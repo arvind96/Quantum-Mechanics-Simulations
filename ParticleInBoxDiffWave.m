@@ -3,5 +3,5 @@ function [z] = ParticleInBoxDiffWave(L, c1, c2, c3, x, t)
 end
 
 function e = CalculateEnergy(n, L)
-    e = n^2 * pi^2 * 1 / 2 * 1 * L^2;
+    e = (n^2 * pi^2 * 1) / (2 * 1 * L^2);
 end

@@ -4,9 +4,9 @@ global MainHandle; %stores the handle for MainGUI
 
 %Reset here
 SetTime(0);
-SetTimeScale(0.0003);
+SetTimeScale(1.5000);
 
-set(MainHandle.uipanelTopControls, 'Title', 'PARTICLE in 1D BOX');
+set(MainHandle.uipanelTopControls, 'Title', 'PARTICLE in FINITE 1D BOX');
 
 cla(MainHandle.axesEquations);
 
@@ -25,9 +25,12 @@ set(MainHandle.sliderOther1, 'Min', 3.00, 'Max', 10.00);
 SetOtherSliderValue1(6.00);
 
 
-x = (0:GetOtherSliderValue1()/100:GetOtherSliderValue1());
-    
-z = ParticleInBoxWave(GetOtherSliderValue1(), GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x, GetTime());
+x = (-10:0.1:10);
+XSize = size(x);
+z = x;
+for K = 1:1:XSize(2)
+  z(K) = ParticleInFiniteBoxWave(GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x(K), GetTime());
+end
 
 p = CalculateProbability(z);
 
@@ -46,8 +49,8 @@ set(hl, 'Interpreter', 'latex');
 xlabel(MainHandle.axes1, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
 ylabel(MainHandle.axes1, '$$\psi(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
 
-xlim(MainHandle.axes1, [0 GetOtherSliderValue1()]);
-ylim(MainHandle.axes1, [-1.5 1.5]);
+xlim(MainHandle.axes1, [-10 10]);
+ylim(MainHandle.axes1, [-0.5 0.5]);
 
 %probability
 
@@ -62,8 +65,8 @@ set(hl, 'Interpreter', 'latex');
 xlabel(MainHandle.axes2, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
 ylabel(MainHandle.axes2, '$$P(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
 
-xlim(MainHandle.axes2, [0 GetOtherSliderValue1()]);
-ylim(MainHandle.axes2, [-1.5 1.5]);
+xlim(MainHandle.axes2, [-10 10]);
+ylim(MainHandle.axes2, [-0.5 0.5]);
 
 %current density
 
@@ -78,5 +81,5 @@ set(hl, 'Interpreter', 'latex');
 xlabel(MainHandle.axes3, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
 ylabel(MainHandle.axes3, '$$j(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
 
-xlim(MainHandle.axes3, [0 GetOtherSliderValue1()]);
-ylim(MainHandle.axes3, [-1.5 1.5]);
+xlim(MainHandle.axes3, [-GetOtherSliderValue1() GetOtherSliderValue1()]);
+ylim(MainHandle.axes3, [-2 2]);
