@@ -11,13 +11,16 @@ set(MainHandle.uipanelTopControls, 'Title', 'PARTICLE in FINITE 1D BOX');
 cla(MainHandle.axesEquations);
 
 %wave equation
-str = '$$\psi_n(x,t) = \sqrt{\frac{2}{L}}\sin\left(\frac{n \pi}{L}x\right)e^{-\frac{\iota E_n t}{\hbar}}$$';
-text(0.0 , 0.75, str, 'Interpreter', 'latex', 'FontSize', 12, 'Parent', MainHandle.axesEquations);
+str = '$$\psi_1(x,t) = De^{\alpha x};  \;\;\;  \psi_2(x,t) = Asin(kx) + Bcos(kx); \;\;\; \psi_3(x,t) = He^{-\alpha x}$$';
+text(0.0 , 0.66 + 0.165, str, 'Interpreter', 'latex', 'FontSize', 11, 'Parent', MainHandle.axesEquations);
 
-str = '$$\psi(x,t) = \sum_{n=1}^{\infty}{c_n \psi_n(x,t)}  \;\;\;\;\;  P(x,t) = \psi^{*}(x,t) \psi(x,t)$$';
-text(0.0 , 0.25, str, 'Interpreter', 'latex', 'FontSize', 12, 'Parent', MainHandle.axesEquations);
+str = '$$For \; symmetric \; A = 0 \; and \; G = H, \; For \; antisymmetric \; B = 0 \; and \; G = -H$$';
+text(0.0 , 0.33 + 0.165, str, 'Interpreter', 'latex', 'FontSize', 11, 'Parent', MainHandle.axesEquations);
 
-set(MainHandle.uipanelOther1, 'Visible', 'On');
+str = '$$\psi(x,t) = \psi_1 (if x < -L/2),\;\;\psi_2 (if \; -L/2 < x < L/2),\;\;\psi_3 (if \; x > L/2)  \;\;\;\;\;  P(x,t) = \psi^{*}(x,t) \psi(x,t)$$';
+text(0.0 , 0.165, str, 'Interpreter', 'latex', 'FontSize', 11, 'Parent', MainHandle.axesEquations);
+
+set(MainHandle.uipanelOther1, 'Visible', 'Off');
 set(MainHandle.uipanelOther2, 'Visible', 'Off');
 set(MainHandle.uipanelOther3, 'Visible', 'Off');
 
@@ -25,7 +28,7 @@ set(MainHandle.sliderOther1, 'Min', 3.00, 'Max', 10.00);
 SetOtherSliderValue1(6.00);
 
 
-x = (-10:0.1:10);
+x = (-15:0.1:15);
 XSize = size(x);
 z = x;
 for K = 1:1:XSize(2)
@@ -49,8 +52,8 @@ set(hl, 'Interpreter', 'latex');
 xlabel(MainHandle.axes1, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
 ylabel(MainHandle.axes1, '$$\psi(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
 
-xlim(MainHandle.axes1, [-10 10]);
-ylim(MainHandle.axes1, [-0.5 0.5]);
+xlim(MainHandle.axes1, [-15 15]);
+ylim(MainHandle.axes1, [-0.8 0.8]);
 
 %probability
 
@@ -65,8 +68,8 @@ set(hl, 'Interpreter', 'latex');
 xlabel(MainHandle.axes2, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
 ylabel(MainHandle.axes2, '$$P(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
 
-xlim(MainHandle.axes2, [-10 10]);
-ylim(MainHandle.axes2, [-0.5 0.5]);
+xlim(MainHandle.axes2, [-15 15]);
+ylim(MainHandle.axes2, [-0.8 0.8]);
 
 %current density
 

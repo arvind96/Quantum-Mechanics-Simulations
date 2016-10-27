@@ -2,7 +2,7 @@ function UpdateParticleInFiniteBox1DSimulation()
 
 while(GetApplicationState() == 1 && GetTime() < 10000)
 
-    x = (-10:0.1:10);
+    x = (-15:0.1:15);
     XSize = size(x);
     z = x;
     for K = 1:1:XSize(2)

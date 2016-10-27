@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1385339548" file="E:\_C\_Matlab\Quantum Mechanics Simulation\QuantumMechanicsSimulations.prj" location="E:\_C\_Matlab\Quantum Mechanics Simulation" name="QuantumMechanicsSimulations" preferred-package-location="E:\_C\_Matlab\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="3375686187" file="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations.prj" location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation" name="QuantumMechanicsSimulations" preferred-package-location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>QuantumMechanicsSimulations</param.appname>
     <param.icon />
     <param.icons />
@@ -42,9 +42,6 @@
       <param.icon />
       <param.icons />
       <param.version />
-      <param.authnamewatermark />
-      <param.email />
-      <param.company />
       <param.screenshot />
       <param.guid />
       <param.net.saved.interface />
@@ -79,12 +76,17 @@
       <file>${PROJECT_ROOT}\CalculateProbability.m</file>
       <file>${PROJECT_ROOT}\GetApplicationState.m</file>
       <file>${PROJECT_ROOT}\GetCurrentSimulation.m</file>
+      <file>${PROJECT_ROOT}\GetDefaultAspectRation.m</file>
       <file>${PROJECT_ROOT}\GetLineGraph1.m</file>
       <file>${PROJECT_ROOT}\GetLineGraph2.m</file>
       <file>${PROJECT_ROOT}\GetLineGraph3.m</file>
       <file>${PROJECT_ROOT}\GetOtherSliderValue1.m</file>
+      <file>${PROJECT_ROOT}\GetOtherSliderValue2.m</file>
+      <file>${PROJECT_ROOT}\GetOtherSliderValue3.m</file>
+      <file>${PROJECT_ROOT}\GetScreenSize.m</file>
       <file>${PROJECT_ROOT}\GetSurfaceGraph1.m</file>
       <file>${PROJECT_ROOT}\GetSurfaceGraph2.m</file>
+      <file>${PROJECT_ROOT}\GetSurfaceGraph3.m</file>
       <file>${PROJECT_ROOT}\GetTime.m</file>
       <file>${PROJECT_ROOT}\GetTimeScale.m</file>
       <file>${PROJECT_ROOT}\GetWaveInC1.m</file>
@@ -93,15 +95,18 @@
       <file>${PROJECT_ROOT}\GetWaveInC2Priority.m</file>
       <file>${PROJECT_ROOT}\GetWaveInC3.m</file>
       <file>${PROJECT_ROOT}\GetWaveInC3Priority.m</file>
+      <file>${PROJECT_ROOT}\Globals.m</file>
       <file>${PROJECT_ROOT}\HarmonicOscillatorDiffWave.m</file>
       <file>${PROJECT_ROOT}\HarmonicOscillatorWave.m</file>
       <file>${PROJECT_ROOT}\LoadSimulation.m</file>
       <file>${PROJECT_ROOT}\MainGUI.fig</file>
+      <file>${PROJECT_ROOT}\MainGUI.m</file>
       <file>${PROJECT_ROOT}\NormalizeC.m</file>
       <file>${PROJECT_ROOT}\OnMainFigureSizeChanged.m</file>
       <file>${PROJECT_ROOT}\OnOtherSliderValueChange.m</file>
       <file>${PROJECT_ROOT}\ParticleInBoxDiffWave.m</file>
       <file>${PROJECT_ROOT}\ParticleInBoxWave.m</file>
+      <file>${PROJECT_ROOT}\ParticleInFiniteBoxWave.m</file>
       <file>${PROJECT_ROOT}\Quit.m</file>
       <file>${PROJECT_ROOT}\Reset.m</file>
       <file>${PROJECT_ROOT}\SetApplicationState.m</file>
@@ -115,6 +120,7 @@
       <file>${PROJECT_ROOT}\SetOtherSliderValue3.m</file>
       <file>${PROJECT_ROOT}\SetSurfaceGraph1.m</file>
       <file>${PROJECT_ROOT}\SetSurfaceGraph2.m</file>
+      <file>${PROJECT_ROOT}\SetSurfaceGraph3.m</file>
       <file>${PROJECT_ROOT}\SetTime.m</file>
       <file>${PROJECT_ROOT}\SetTimeScale.m</file>
       <file>${PROJECT_ROOT}\SetWaveInC1.m</file>
@@ -123,24 +129,28 @@
       <file>${PROJECT_ROOT}\SetWaveInC2Priority.m</file>
       <file>${PROJECT_ROOT}\SetWaveInC3.m</file>
       <file>${PROJECT_ROOT}\SetWaveInC3Priority.m</file>
+      <file>${PROJECT_ROOT}\SimpleHarmonicDiffWave.m</file>
+      <file>${PROJECT_ROOT}\SimpleHarmonicWave.m</file>
       <file>${PROJECT_ROOT}\Simulate.m</file>
       <file>${PROJECT_ROOT}\Start.m</file>
       <file>${PROJECT_ROOT}\StartHarmonicOscillator1DSimulation.m</file>
       <file>${PROJECT_ROOT}\StartParticleInBox1DSimulation.m</file>
       <file>${PROJECT_ROOT}\StartParticleInBox2DSimulation.m</file>
+      <file>${PROJECT_ROOT}\StartParticleInFiniteBox1DSimulation.m</file>
       <file>${PROJECT_ROOT}\UpdateHarmonicOscillator1DSimulation.m</file>
       <file>${PROJECT_ROOT}\UpdateParticleInBox1DSimulation.m</file>
       <file>${PROJECT_ROOT}\UpdateParticleInBox2DSimulation.m</file>
+      <file>${PROJECT_ROOT}\UpdateParticleInFiniteBox1DSimulation.m</file>
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="QuantumMechanicsSimulations.exe" optional="false">E:\_C\_Matlab\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\QuantumMechanicsSimulations.exe</file>
-      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="readme.txt" optional="true">E:\_C\_Matlab\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="splash.png" optional="false">E:\_C\_Matlab\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="QuantumMechanicsSimulations.exe" optional="false">C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\QuantumMechanicsSimulations.exe</file>
+      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="splash.png" optional="false">C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\QuantumMechanicsSimulations\for_testing" name="readme.txt" optional="true">C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>E:\_C\Program files\Matlab</root>
+      <root>C:\Program Files\MATLAB\MATLAB Production Server\R2015a</root>
       <toolboxes>
         <toolbox name="matlabhdlcoder" />
         <toolbox name="fixedpoint" />
