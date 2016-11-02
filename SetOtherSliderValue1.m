@@ -5,4 +5,4 @@ global OtherSliderValue1;   %value of the first other slider
 
 OtherSliderValue1 = value;
 set(MainHandle.sliderOther1, 'Value', OtherSliderValue1);
-OnOtherSliderValueChange();
+OnOtherSliderValueChange(1);

@@ -31,8 +31,6 @@ z = ParticleInBoxWave(GetOtherSliderValue1(), GetWaveInC1(), GetWaveInC2(), GetW
 
 p = CalculateProbability(z);
 
-density = CalculateCurrentDensity(z, ParticleInBoxDiffWave(10, GetWaveInC1(), GetWaveInC2(), GetWaveInC3(), x, GetTime()));
-
 %wavefunction
 
 SetSurfaceGraph1(mesh(MainHandle.axes1, x, y, real(z)));
@@ -49,7 +47,7 @@ xlim(MainHandle.axes1, [0 GetOtherSliderValue1()]);
 ylim(MainHandle.axes1, [0 GetOtherSliderValue1()]);
 zlim(MainHandle.axes1, [-1 1]);
 
-caxis(MainHandle.axes1, [-1,1]);
+%caxis(MainHandle.axes1, [-1,1]);
 
 %probability
 
@@ -67,23 +65,23 @@ xlim(MainHandle.axes2, [0 GetOtherSliderValue1()]);
 ylim(MainHandle.axes2, [0 GetOtherSliderValue1()]);
 zlim(MainHandle.axes2, [0.0 1.0]);
 
-caxis(MainHandle.axes2, [-1,1]);
+%caxis(MainHandle.axes2, [-1,1]);
 
-%current density
+set(MainHandle.figureMain, 'currentaxes', MainHandle.axes1);
+daspect([1 1 0.4]);
+view(3); 
+axis vis3d;
+camlight;
+lighting phong;
 
-SetLineGraph3(plot(MainHandle.axes3, x, real(density)));
+set(MainHandle.figureMain, 'currentaxes', MainHandle.axes2);
+daspect([1 1 0.4]);
+view(3); 
+axis vis3d;
+camlight;
+lighting phong;
 
-set(MainHandle.uipanelAxes3, 'Title', 'CURRENT DENSITY WITH TIME');
-
-legend(MainHandle.axes3, texlabel('y = j(psi(x,t))'));
-
-xlabel(MainHandle.axes3, '$$x\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % x-axis label
-ylabel(MainHandle.axes3, '$$j(x,t)\rightarrow$$', 'Interpreter', 'latex', 'FontSize', 10) % y-axis label
-
-xlim(MainHandle.axes3, [0 GetOtherSliderValue1()]);
-ylim(MainHandle.axes3, [-1.5 1.5]);
-
-
+rotate3d on;
 
 
 

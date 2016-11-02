@@ -15,6 +15,12 @@ switch GetCurrentSimulation()
         UpdateParticleInFiniteBox1DSimulation();
     case 32
         
+    case 41
+        
+    case 42
+        
+    case 51
+        
     otherwise %may be use case 11
 
 end

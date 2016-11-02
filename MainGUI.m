@@ -22,7 +22,7 @@ function varargout = MainGUI(varargin)
 
 % Edit the above text to modify the response to help MainGUI
 
-% Last Modified by GUIDE v2.5 29-Sep-2016 19:32:58
+% Last Modified by GUIDE v2.5 01-Nov-2016 18:30:46
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -417,6 +417,23 @@ function menu_FiniteSquareWell_1D_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 SetCurrentSimulation(31);
 Reset();
+
+
+% --------------------------------------------------------------------
+function menu_HydrogenAtom_Callback(hObject, eventdata, handles)
+% hObject    handle to menu_HydrogenAtom (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function menu_HydrogenAtom_ProbabilityDensity_Callback(hObject, eventdata, handles)
+% hObject    handle to menu_HydrogenAtom_ProbabilityDensity (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+SetCurrentSimulation(51);
+Reset();
+
 
 % --------------------------------------------------------------------
 function menu_FiniteSquareWell_2D_Callback(hObject, eventdata, handles)

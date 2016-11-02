@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3375686187" file="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations.prj" location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation" name="QuantumMechanicsSimulations" preferred-package-location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="2078914033" file="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations.prj" location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation" name="QuantumMechanicsSimulations" preferred-package-location="C:\_C\_Matlab Projects\Quantum Mechanics Simulation\QuantumMechanicsSimulations\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>QuantumMechanicsSimulations</param.appname>
     <param.icon />
     <param.icons />
@@ -134,6 +134,7 @@
       <file>${PROJECT_ROOT}\Simulate.m</file>
       <file>${PROJECT_ROOT}\Start.m</file>
       <file>${PROJECT_ROOT}\StartHarmonicOscillator1DSimulation.m</file>
+      <file>${PROJECT_ROOT}\StartHydrogenAtomProbabilityDensity.m</file>
       <file>${PROJECT_ROOT}\StartParticleInBox1DSimulation.m</file>
       <file>${PROJECT_ROOT}\StartParticleInBox2DSimulation.m</file>
       <file>${PROJECT_ROOT}\StartParticleInFiniteBox1DSimulation.m</file>
